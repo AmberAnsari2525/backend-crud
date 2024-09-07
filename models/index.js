@@ -1,3 +1,4 @@
+
 const { Sequelize  , DataTypes } = require('sequelize');
 require('dotenv').config();
 
@@ -13,10 +14,12 @@ const sequelize = new Sequelize(
 );
 //import all models
 const User = require('./User') (sequelize, DataTypes);
+const Product = require('./Product') (sequelize, DataTypes);
 // Export the sequelize instance and models separately
 module.exports = {
     sequelize,
     models: {
         User,
+        Product,
     }
 }

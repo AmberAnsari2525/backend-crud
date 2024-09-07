@@ -1,6 +1,6 @@
 const express = require('express');
 const { register , login} = require('../controllers/authController');
-const authMiddleware = require('../middlewares/authMiddleweare');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 const router = express.Router();
 
@@ -14,4 +14,3 @@ router.get('/protected', authMiddleware, (req, res) => {
 });
 
 module.exports = router;
-
